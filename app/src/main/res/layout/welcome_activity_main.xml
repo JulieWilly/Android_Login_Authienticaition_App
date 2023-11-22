@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".WelcomeActivity">
+
+ 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="15dp">
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_logo"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/welcome_img"
+            android:maxHeight="180dp"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_welcome"
+            android:layout_marginTop="30dp"
+            android:text="Welcome to Android Firebase App"
+            android:textAlignment="center"
+            android:layout_below="@id/img_logo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Welcome"
+            android:text="Login"
+            android:layout_marginTop="100dp"
+            android:layout_below="@id/txt_welcome"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_register"
+            android:text="Register"
+            android:layout_below="@id/btn_Welcome"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"/>
+        
+    </RelativeLayout>
+</ScrollView>

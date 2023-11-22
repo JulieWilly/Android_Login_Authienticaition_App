@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".Updates.UpdateEmailActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            android:id="@+id/rl_email">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_cgh_pwd_head"
+                android:text="You can update your email address now. Please enter your password and verify before continuing."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_update_email"
+                android:layout_below="@id/txt_cgh_pwd_head"
+                android:text="Current Email"
+                android:layout_marginTop="50dp"
+                android:padding="6dp"
+                android:textColor="#555555"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_update_email_old"
+                android:layout_below="@id/txt_update_email"
+                android:layout_marginTop="10dp"
+                android:textColor="#555555"
+                android:background="@drawable/border"
+                android:padding="6dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_verify_pwd_title"
+                android:layout_below="@id/txt_update_email_old"
+                android:text="Confirmation password*"
+                android:layout_marginTop="10dp"
+                android:textColor="#555555"
+                android:padding="6dp"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_verify_curr_pwd"
+                android:layout_below="@id/txt_verify_pwd_title"
+                android:hint="Enter your password."
+                android:inputType="textPassword"
+                android:padding="6dp"
+                android:textSize="16sp"
+                android:background="@drawable/border"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_authenticate_pwd"
+                android:layout_below="@id/edt_verify_curr_pwd"
+                android:text="Authenticate"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:layout_below="@id/rl_email">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_curr_pwd_authenticated"
+                android:text="You profile is not authenticated/ verified first"
+                android:layout_marginTop="30dp"
+                android:textColor="#555555"
+                android:padding="6dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_new_pwd_title"
+                android:layout_below="@id/txt_curr_pwd_authenticated"
+                android:text="New email"
+                android:layout_marginTop="20dp"
+                android:textColor="#555555"
+                android:padding="6dp"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edt_new_pwd"
+                android:layout_below="@id/txt_new_pwd_title"
+                android:hint="Enter your new email."
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textSize="16sp"
+                android:background="@drawable/border"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_update_new_pwd"
+                android:layout_below="@id/edt_new_pwd"
+                android:text="Update Email"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/update_email_progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

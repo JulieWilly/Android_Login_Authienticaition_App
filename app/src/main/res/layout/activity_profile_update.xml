@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".Updates.ProfileUpdateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_Update_profile_head"
+            android:layout_marginTop="30dp"
+            android:text="You can update your profile details now!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_update_profile_name"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt_Update_profile_head"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Enter your name*"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_update_profile_name"
+            android:layout_below="@id/txt_update_profile_name"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:background="@drawable/border"
+            android:hint="Enter your full name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_update_profile_Dob"
+            android:layout_below="@id/edt_update_profile_name"
+            android:layout_marginTop="20dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Date of Birth(dd/mm/yy"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_update_profile_Dob"
+            android:layout_below="@id/txt_update_profile_Dob"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:background="@drawable/border"
+            android:hint="Select the date of your birth"
+            android:focusable="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_update_profile_gender"
+            android:layout_below="@id/edt_update_profile_Dob"
+            android:layout_marginTop="20dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Gender"
+            android:textColor="#555555"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_group_update_gender"
+            android:layout_below="@id/txt_update_profile_gender"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_update_female"
+                android:text="Female"
+                android:textSize="16sp"
+                android:textColor="#666666"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_update_male"
+                android:textSize="16sp"
+                android:text="Male"
+                android:textColor="#666666"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_update_profile_mobile"
+            android:layout_below="@id/radio_group_update_gender"
+            android:layout_marginTop="20dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:text="Phone/Mobile"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_update_profile_mobile"
+            android:layout_below="@id/txt_update_profile_mobile"
+            android:inputType="number"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:background="@drawable/border"
+            android:hint="Enter phone number.No country code"/>
+
+        <Button
+            android:id="@+id/upload_dp_pic_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_update_profile_mobile"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Upload profile picture"/>
+
+        <Button
+            android:id="@+id/update_email_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_dp_pic_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Update Email"/>
+
+        <Button
+            android:id="@+id/upload_profile_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_email_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:text="Update profile"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_login_head_title"
+            android:layout_marginTop="30dp"
+            android:text="Please enter your credentials."
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+<!--        Email entry -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_login_email"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/txt_login_head_title"
+            android:text="Email*"
+            android:padding="6dp"
+            android:textColor="#555555"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_login_email"
+            android:layout_below="@id/txt_login_email"
+            android:inputType="textEmailAddress"
+            android:hint="Enter your email."
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:background="@drawable/border"/>
+
+<!--        Password entry -->
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_login_password"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/edt_login_email"
+            android:text="Password*"
+            android:padding="6dp"
+            android:textColor="#555555"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="43dp"
+            android:id="@+id/img_pass_show_hide"
+            android:layout_below="@id/txt_login_password"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_login_password"
+            android:layout_below="@id/txt_login_password"
+            android:inputType="textPassword"
+            android:hint="Enter your password."
+            android:padding="10dp"
+            android:layout_marginStart="42dp"
+            android:textSize="16dp"
+            android:background="@drawable/border"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/button_login"
+            android:layout_below="@id/edt_login_password"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"/>
+
+<!--            Forget password-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot password."
+            android:id="@+id/button_forgot_password"
+            android:layout_below="@id/button_login"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"/>
+
+        <ProgressBar
+            android:id="@+id/login_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</ScrollView>
